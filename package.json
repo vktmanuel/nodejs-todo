@@ -1,0 +1,22 @@
+{
+  "name": "nodejs-todo",
+  "version": "1.0.0",
+  "description": "Practical exam to-do list",
+  "main": "app.js",
+  "dependencies": {
+    "@mdi/font": "^4.4.95",
+    "bulma": "^0.7.5",
+    "ejs": "^2.7.1",
+    "express": "^4.17.1",
+    "mysql2": "^1.7.0",
+    "nodemon": "^1.19.3",
+    "start": "^5.1.0"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "nodemon app.js"
+  },
+  "author": "Vince Kirby T. Manuel",
+  "license": "ISC"
+}
