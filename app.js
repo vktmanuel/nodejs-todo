@@ -9,6 +9,7 @@ app.set('view engine', 'ejs');
 const errorController = require('./controllers/error');
 
 const adminData = require('./routes/admin');
+const shopRoutes = require('./routes/shop');
 
 app.use(bodyParser.urlencoded({ extended: false }));
 
@@ -18,7 +19,7 @@ app.use('/css', express.static(path.join(__dirname, 'node_modules/@mdi/font/css'
 app.use('/fonts', express.static(path.join(__dirname, 'node_modules/@mdi/font/fonts')));
 
 app.use(adminData.routes);
-
+app.use(shopRoutes);
 app.use(errorController.get404);
 
-app.listen(3000);
+app.listen(3111);

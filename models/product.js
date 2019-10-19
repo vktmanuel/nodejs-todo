@@ -16,10 +16,10 @@ module.exports = class Product {
     static deleteById(id) {}
 
     static fetchAll() {
-        return db.execute('SELECT * FROM products');
+        return db.execute('SELECT * FROM todo');
     }
 
     static findById(id) {
-        return db.execute('SELECT * FROM products WHERE products.id = ?', [id]);
+        return db.execute('SELECT * FROM todo WHERE todo.id = ?', [id]);
     }
 }

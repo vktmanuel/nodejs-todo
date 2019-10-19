@@ -1,0 +1,47 @@
+<%- include('../includes/head.ejs') %>
+</head>
+
+<body>
+    <%- include('../includes/nav.ejs') %>
+
+    <section class="section">
+        <div class="container">
+            <div class="columns is-multiline">
+                <% if (prods.length > 0) { %>
+                <% for (let product of prods) { %>
+                <div class="column is-one-quarter">
+                    <div class="card">
+                        <div class="card-content">
+                            <div class="media">
+                                <div class="media-content">
+                                    <p class="title is-4"><%=prods.title%></p>
+                                </div>
+                            </div>
+                            <footer class="card-footer">
+                                <a class="card-footer-item" href="products/<%=prods.id%>/edit">
+                                    <span class="icon">
+                                        <i class="mdi mdi-pencil"></i>
+                                    </span>
+                                    <span>Edit</span>
+                                </a>
+                                <a class="card-footer-item" href="products/<%=prods.id%>/delete">
+                                    <span class="icon">
+                                        <i class="mdi mdi-delete"></i>
+                                    </span>
+                                    <span>Delete</span>
+                                </a>
+                            </footer>
+                        </div>
+                    </div>
+                </div>
+                <% } %>
+                <% } else { %>
+                <h1>No Products Found!</h1>
+                <% } %>
+            </div>
+        </div>
+    </section>
+    <%- include('../includes/scripts.ejs') %>
+</body>
+
+</html>

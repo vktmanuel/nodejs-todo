@@ -2,7 +2,7 @@ const Product = require('../models/product');
 
 exports.getAddProduct = (req, res) => {
   res.render('admin/add-product', {
-    pageTitle: 'Add Product',
+    pageTitle: 'Add Task',
     path: 'add-product'
   });
 };
@@ -17,3 +17,4 @@ exports.postAddProduct = (req, res) => {
       })
       .catch(err => console.log(err));
   };
+
